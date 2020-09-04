@@ -24,7 +24,10 @@ matrix:
       env: TOXENV=pep8py2
     - python: 3.6
       env: TOXENV=pep8py3
-
+arch:
+  - ppc64le
+before_install:
+  - sudo chown -Rvf $USER:$GROUP ~/.cache/pip/wheels
 install:
   - pip install --upgrade pip setuptools
   - pip --version
